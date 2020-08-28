@@ -1,0 +1,25 @@
+dependencies {
+	implementation project(':components')
+
+	implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+	implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+	implementation "com.google.code.gson:gson:$gsonVersion"
+
+	implementation "com.google.dagger:dagger:$daggerVersion"
+	implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+	implementation "androidx.appcompat:appcompat:$androidX"
+	implementation "com.google.android.material:material:$material"
+	implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
+	kapt "com.github.moxy-community:moxy-compiler:$moxyVersion"
+	implementation "com.github.moxy-community:moxy-androidx:$moxyVersion"
+
+	implementation "io.reactivex.rxjava2:rxandroid:$rxVersion"
+	implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+	implementation "com.squareup.picasso:picasso:$picassoVersion"
+}

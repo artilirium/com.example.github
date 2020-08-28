@@ -1,0 +1,14 @@
+dependencies {
+	implementation project(':components')
+
+	implementation "androidx.appcompat:appcompat:$androidX"
+	implementation "com.google.android.material:material:$material"
+	implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
+	kapt "com.github.moxy-community:moxy-compiler:$moxyVersion"
+	implementation "com.github.moxy-community:moxy-androidx:$moxyVersion"
+
+	kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+	implementation "com.google.dagger:dagger:$daggerVersion"
+	implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+}

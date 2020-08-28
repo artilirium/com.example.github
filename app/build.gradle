@@ -1,0 +1,18 @@
+dependencies {
+	implementation project(':components')
+	implementation project(':features.main')
+	implementation project(':features.repositories')
+
+	kapt "com.github.moxy-community:moxy-compiler:$moxyVersion"
+	implementation "com.github.moxy-community:moxy-androidx:$moxyVersion"
+
+	kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+	kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+	implementation "com.google.dagger:dagger:$daggerVersion"
+	implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+	implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+	implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+	implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+	implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+}

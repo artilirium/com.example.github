@@ -1,0 +1,9 @@
+include ':app'
+include ':components'
+include ':features.repositories'
+include ':features.main'
+
+project(":features.repositories").projectDir = new File(rootDir, "features/repositories")
+project(":features.main").projectDir = new File(rootDir, "features/main")
+
+rootProject.name = "github"

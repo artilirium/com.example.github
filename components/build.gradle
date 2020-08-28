@@ -1,0 +1,13 @@
+dependencies {
+	implementation "com.google.dagger:dagger:$daggerVersion"
+	implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+	implementation "androidx.appcompat:appcompat:$androidX"
+	implementation "com.google.android.material:material:$material"
+
+	implementation "io.reactivex.rxjava2:rxandroid:$rxVersion"
+
+	implementation "com.github.moxy-community:moxy-androidx:$moxyVersion"
+
+	implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+}
