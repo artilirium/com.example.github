@@ -5,7 +5,9 @@ import androidx.fragment.app.FragmentManager
 
 interface Navigator {
 
-	fun attach(fragmentManager: FragmentManager, @IdRes containerId: Int)
+	fun setContainer(@IdRes containerId: Int)
+
+	fun attach(fragmentManager: FragmentManager)
 
 	fun detach()
 }

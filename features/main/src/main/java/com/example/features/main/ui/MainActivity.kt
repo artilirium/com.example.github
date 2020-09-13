@@ -36,11 +36,16 @@ class MainActivity : MvpAppCompatActivity(), MainView, HasAndroidInjector {
 		super.onCreate(savedInstanceState)
 
 		setContentView(R.layout.activity_main)
-		navigator.attach(supportFragmentManager, R.id.container)
+		navigator.setContainer(R.id.container)
 	}
 
-	override fun onDestroy() {
+	override fun onStart() {
+		super.onStart()
+		navigator.attach(supportFragmentManager)
+	}
+
+	override fun onStop() {
 		navigator.detach()
-		super.onDestroy()
+		super.onStop()
 	}
 }

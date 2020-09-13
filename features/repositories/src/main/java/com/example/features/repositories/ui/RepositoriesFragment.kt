@@ -11,7 +11,7 @@ import com.example.features.repositories.presentation.RepositoriesPresenter
 import com.example.features.repositories.presentation.RepositoriesView
 import kotlinx.android.synthetic.main.repositories_fragment.progress
 import kotlinx.android.synthetic.main.repositories_fragment.repositoriesView
-import kotlinx.android.synthetic.main.repositories_fragment.retry
+import kotlinx.android.synthetic.main.repositories_fragment.retryButton
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import javax.inject.Inject
@@ -42,6 +42,7 @@ class RepositoriesFragment : BaseFragment(), RepositoriesView {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 		repositoriesView.adapter = adapter
+		retryButton.setOnClickListener { presenter.onRetryLoadClicked() }
 	}
 
 	override fun showRepositories(repositories: List<Repository>) {
@@ -86,12 +87,12 @@ class RepositoriesFragment : BaseFragment(), RepositoriesView {
 
 	override fun showProgress() {
 		progress.visibility = View.VISIBLE
-		retry.visibility = View.GONE
+		retryButton.visibility = View.GONE
 		repositoriesView.visibility = View.GONE
 	}
 
 	override fun showRetryButton() {
-		retry.visibility = View.VISIBLE
+		retryButton.visibility = View.VISIBLE
 		repositoriesView.visibility = View.GONE
 	}
 }

@@ -17,8 +17,11 @@ class MainRouter @Inject constructor() : Router, Navigator {
 	private var isFirstFragment = true
 	private var fragmentManager: FragmentManager? = null
 
-	override fun attach(fragmentManager: FragmentManager, @IdRes containerId: Int) {
+	override fun setContainer(@IdRes containerId: Int) {
 		this.containerId = containerId
+	}
+
+	override fun attach(fragmentManager: FragmentManager) {
 		this.fragmentManager = fragmentManager
 	}
 
